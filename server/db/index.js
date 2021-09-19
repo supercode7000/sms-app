@@ -5,9 +5,8 @@ const datas = require('../data/data')
 
 mongoose
     .connect('mongodb://mongo:27017/sms', { useNewUrlParser: true })
-    .catch(e => {
-        console.error('Connection error', e.message)
-    })
+    .catch(e => console.error('Connection error', e.message)
+    )
 // Seed the Database sms with the json file
 Data.collection.drop();
 Data.create(datas)
